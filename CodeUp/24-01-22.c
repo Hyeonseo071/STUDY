@@ -94,3 +94,35 @@ int main(){
 
     return 0;
 }
+//
+//1080
+#include<stdio.h>
+int main(){
+    int n, i;
+    int sum=0;
+    scanf("%d", &n);
+    for(i=0; i<n; i++){
+        sum += i;
+        if(sum>=n){
+            break;
+        } 
+    }
+    printf("%d", i);
+
+    return 0;
+}
+//
+//1081
+#include<stdio.h>
+int main(){
+    int i, j;
+    int a, b;
+    scanf("%d %d", &a, &b);
+    for(i=1; i<=a; i++){
+        for(j=1; j<=b; j++){
+            printf("%d %d\n", i, j);
+        }
+    }
+
+    return 0;
+}
