@@ -46,3 +46,8 @@ print(c)
 #6036
 a, b = input().split()
 print(a*int(b))
+#
+#6037
+a = int(input())
+b = input()
+print(b*a)
