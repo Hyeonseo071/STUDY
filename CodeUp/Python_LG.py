@@ -117,3 +117,44 @@ else: print("False")
 a, b = map(int, input().split())
 if(b>=a): print("True")
 else: print("False")
+#
+#6051
+a, b = map(int, input().split())
+if(a!=b): print("True")
+else: print("False")
+#
+#6052
+a = int(input())
+print(bool(a)) #1이면 참, 아니면(=0)거짓이 출력
+#
+#6053
+a = bool(int(input()))
+print(not a)
+#
+#6054
+a, b = map(int, input().split())
+print(bool(a) and bool(b))
+#
+#6055
+a, b = map(int, input().split())
+print(bool(a) or bool(b))
+#
+#6056
+a, b = map(int, input().split())
+print(bool(a and (not b)) or bool((not a) and b))
+#
+#6057
+a, b = map(int, input().split())
+print(bool(a and b) or ((not a) and (not b)))
+#
+#6058
+a, b = map(int, input().split())
+print(bool((not a) and (not b)))
+#
+#6059(비트단위 논리연산)
+a = int(input())
+print(~a) #if.a=1 -> ~a = -2
+#
+#6060
+a, b = map(int, input().split())
+print(a&b) 
