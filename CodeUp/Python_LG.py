@@ -157,4 +157,94 @@ print(~a) #if.a=1 -> ~a = -2
 #
 #6060
 a, b = map(int, input().split())
-print(a&b) 
+print(a&b) #and
+#
+#6061
+a, b = map(int, input().split())
+print(a|b) #or
+#
+#6062
+a, b = map(int, input().split())
+print(a^b) #xor
+#
+#6063
+a, b = map(int, input().split())
+if(a>b): print(a)
+else: print(b)
+#
+#6064
+a, b, c = map(int, input().split())
+if(a<b and a<c): print(a)
+elif(b<a and b<c): print(b)
+else: print(c)
+#
+#6065
+a, b, c = map(int, input().split())
+if(a%2==0): print(a)
+if(b%2==0): print(b)
+if(c%2==0): print(c)
+#
+#6066
+a, b, c = map(int, input().split())
+if(a%2==0): print("even")
+else: print("odd")
+if(b%2==0): print("even")
+else: print("odd")
+if(c%2==0): print("even")
+else: print("odd")
+#
+#6067
+a = int(input())
+if a<0:
+    if(a%2==0): print('A')
+    else: print('B')
+if a>0:
+    if(a%2==0): print('C')
+    else: print('D')
+#
+#6068
+n = int(input())
+if(90<=n<=100): print('A')
+elif(70<=n<=89): print('B')
+elif(40<=n<=69): print('C')
+else: print('D')
+#
+#6071
+while(1):
+    n = int(input())
+    if(n!=0): print(n)
+    else: break #만약 n의 값이 0이라면 반복 중지.
+#
+#6072
+a = int(input())
+for i in range(a):
+    print(a)
+    a=a-1
+#
+#6074
+c = ord(input()) #문자를 숫자로 변환
+t = ord('a')    #a부터 시작하므로 a=1
+while(t<=c): #a부터 c(입력한 값)까지
+    print(chr(t), end=' ') #공백을 띄워 출력
+    t+=1  #다음 문자를 출력
+#
+#6076
+n = int(input())
+for i in range(0, n+1, 1):
+    print(i)
+#
+#6078
+while(1):
+    c = input()
+    if(c=='q'): 
+        print(c)
+        break
+    else: print(c)
+#
+#6081(16진수 구구단 출력)
+a = int(input(), 16)
+for i in range(1, 16):
+    print("%X*%X=%X"%(a, i, a*i))
+#
+#6082
+#
