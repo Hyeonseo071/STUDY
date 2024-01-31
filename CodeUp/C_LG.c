@@ -127,4 +127,32 @@ int main(){
     return 0;
 }
 //
-//1089
+//1082
+#include<stdio.h>
+int main(){
+    int n, i;
+    scanf("%X", &n);
+    for(i=1; i<=15; i++){
+        printf("%X*%X=%X\n", n, i, n*i);
+    }
+
+    return 0;
+}
+//
+//1084
+#include<stdio.h>
+int main(){
+    int i, j, k;
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    for(i=0; i<a; i++){
+        for(j=0; j<b; j++){
+            for(k=0; k<c; k++){
+                printf("%d %d %d\n", i, j, k);
+            }
+        }
+    }
+    printf("%d", i*j*k);
+
+    return 0;
+}
