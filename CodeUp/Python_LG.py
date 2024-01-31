@@ -246,5 +246,17 @@ a = int(input(), 16)
 for i in range(1, 16):
     print("%X*%X=%X"%(a, i, a*i))
 #
-#6082
+#6082(3 6 9게임의 왕이 되자)
+a = int(input())
+for i in range(1, a+1):
+    if(i%10==3 or i%10==6 or i%10==9):
+        print("X", end=' ')
+    else: print(i, end=' ')
 #
+#6083
+a, b, c = map(int, input().split())
+for i in range(0, a):
+    for j in range(0, b):
+        for k in range(0, c):
+            print(i, j, k)
+print(a*b*c)
