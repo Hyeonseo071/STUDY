@@ -260,3 +260,24 @@ for i in range(0, a):
         for k in range(0, c):
             print(i, j, k)
 print(a*b*c)
+#
+#6086(거기까지! 이제 그만~)
+n = int(input())
+sum = 0
+for i in range(1, n+1):
+    sum+=i
+    if(sum>=n): break
+print(sum)
+#
+#6087
+n = int(input())
+for i in range(1, n+1):
+    if(i%3==0): continue
+    print(i, end=' ')
+#
+#6088
+a, b, n = map(int, input().split())
+sum = a
+for i in range(2, n+1):
+    sum += b
+print(sum)
