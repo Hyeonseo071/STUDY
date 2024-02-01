@@ -156,3 +156,18 @@ int main(){
 
     return 0;
 }
+//
+//1089
+#include<stdio.h>
+int main(){
+    int i, a, b, n;
+    int sum = 0;
+    scanf("%d %d %d", &a, &b, &n);
+    sum = a;
+    for(i=2; i<=n; i++){
+        sum += b;
+    }
+    printf("%d", sum);
+    
+    return 0;
+}
