@@ -275,9 +275,23 @@ for i in range(1, n+1):
     if(i%3==0): continue
     print(i, end=' ')
 #
-#6088
+#6088(수 나열하기 1)
 a, b, n = map(int, input().split())
 sum = a
 for i in range(2, n+1):
     sum += b
+print(sum)
+#
+#6089(수 나열하기 2)
+a, r, n = map(int, input().split())
+sum = a
+for i in range(2, n+1): #이미 sum에 a값이 정의 되었으므로, 2부터 시작해야 한다.
+    sum = sum*r
+print(sum)
+#
+#6090(수 나열하기 3)
+a, m, d, n = map(int, input().split())
+sum = a
+for i in range(2, n+1):
+    sum = sum*m+d
 print(sum)
