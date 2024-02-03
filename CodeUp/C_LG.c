@@ -260,3 +260,155 @@ int main(){
     printf("%d", sum);
     return 0;
 }
+//
+//1008(특수문자 출력하기)
+#include<stdio.h>
+int main(){
+    printf("\u250c\u252c\u2510\n");
+    printf("\u251C\u253C\u2524\n");
+    printf("\u2514\u2534\u2518\n");
+
+    return 0;
+}
+//
+//1112(두 정수 출력)
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d %d", a, b);
+
+    return 0;
+}
+//
+//1113(바꿔서 출력하기)
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d %d", b, a);
+    return 0;
+}
+//1114(두 정수의 덧셈)
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a+b);
+    return 0;
+}
+//
+//1115(64비트 덧셈)
+int main(){
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%lld", a+b);
+    return 0;
+}
+//
+//1116(사칙연산 계산기)
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d+%d=%d\n", a, b, a+b);
+    printf("%d-%d=%d\n", a, b, a-b);
+    printf("%d*%d=%d\n", a, b, a*b);
+    printf("%d/%d=%d\n", a, b, a/b);
+    return 0;
+}
+//
+//1111(출력)
+#include<stdio.h>
+int main(){
+    int a;
+    scanf("%d", &a);
+    printf("%d%%", a);
+
+    return 0;
+}
+//
+//1110(정수 그대로 출력)
+#include<stdio.h>
+void main(){
+    int a;
+    scanf("%d", &a);
+    printf("%d", a);
+}
+//
+//1120(세 수의 평균)
+#include<stdio.h>
+void main(){
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%.2f", (float)(a+b+c)/3.0);
+}
+//
+//1085(소리파일 저장용량 계산하기)
+#include<stdio.h>
+void main(){
+    long long int h, b, c, s;
+    double sum = 0;
+    scanf("%lld %lld %lld %lld", &h, &b, &c, &s);
+    sum = (float)(h*b*c*s);
+    printf("%.1lf MB", sum/(8*1024*1024));
+
+}
+//
+//1117(두 실수의 곱)
+#include<stdio.h>
+void main(){
+    float a, b;
+    scanf("%f %f", &a, &b);
+    printf("%.2f", a*b);
+}
+//
+//1165(축구의 신)
+#include<stdio.h>
+void main(){
+    int time, n, sum = 0;
+    scanf("%d %d", &time, &n);
+    sum += n;
+    for(int i=time; i<90; i+=5){
+        sum += 1;
+        if(i==90) break;
+    }
+    printf("%d", sum);
+
+}
+//
+//1167
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    // 세 수를 오름차순으로 정렬
+    if (a > b) { //b가 a보다 작을 경우.
+        int temp = a; 
+        a = b;  //(a==b)
+        b = temp;   //a와 b값을 바꾸기(b==a)
+    }
+    if (b > c) { //만약 c가 b보다 작을 경우
+        int temp = b; 
+        b = c; //(b==c)
+        c = temp;   //c와 b의 값 바꾸기(c==b)
+    }
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+    // 두 번째 수 출력
+    printf("%d\n", b);
+    return 0;
+}
+//
+//1171(당신의 학번은?)
+#include <stdio.h>
+int main (void)
+{
+    
+    int grade , class, num;
+    scanf("%d %d %d",&grade, &class, &num);
+    printf("%d%02d%03d",grade,class,num);
+ 
+    return 0;
+}
