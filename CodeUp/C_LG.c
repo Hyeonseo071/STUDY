@@ -171,3 +171,92 @@ int main(){
     
     return 0;
 }
+//
+//1087
+#include<stdio.h>
+int main(){
+    int n, i, sum=0;
+    scanf("%d", &n);
+    for(i=1;; i++){
+        sum += i;
+        if(sum>=n) break;
+    }
+    printf("%d", sum);
+
+    return 0;
+}
+//
+//1088
+#include<stdio.h>
+int main(){
+    int n, i;
+    scanf("%d", &n);
+    for(i=1; i<=n; i++){
+        if(i%3==0) continue;
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+//
+//1090
+#include<stdio.h>
+int main(){
+    long long int a, r, n;
+    int i;
+    scanf("%lld %lld %lld", &a, &r, &n);
+    for(i=1; i<n; i++){
+        a *= r;
+    }
+    printf("%lld", a);
+    return 0;
+}
+//
+//1091
+#include<stdio.h>
+int main(){
+    long long int a, m, d, n , i;
+    scanf("%lld %lld %lld %lld", &a, &m, &d, &n);
+    for(i=1; i<n; i++){
+        a = a*m+d;
+    }
+    printf("%lld", a);
+    return 0;
+}
+//
+//1253
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    int min = a < b ? a : b;  //최소값 구하기
+    int max = a > b ? a : b;  //최대값 구하기
+
+    for(int i=min; i<=max; i++){
+        printf("%d ", i);
+    }
+    return 0;
+}
+//
+//1257
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    for(int i=a; i<=b; i++){
+        if(i%2==1) printf("%d ", i);
+    }
+    return 0;
+}
+//
+//1260
+#include<stdio.h>
+int main(){
+    int a, b, sum=0;
+    scanf("%d %d", &a, &b);
+    for(int i=a; i<=b; i++){
+        if(i%3==0) sum += i;
+    }
+    printf("%d", sum);
+    return 0;
+}
