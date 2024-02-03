@@ -412,3 +412,15 @@ int main (void)
  
     return 0;
 }
+//
+//1139(논리 연산자 AND)
+#include<stdio.h>
+void main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if(a==1 && b==1){
+        printf("1");
+    }
+    else printf("0");
+    
+}
