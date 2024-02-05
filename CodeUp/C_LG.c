@@ -424,3 +424,123 @@ void main(){
     else printf("0");
     
 }
+//
+//1121(나머지 구하기)
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a%b);
+
+    return 0;
+}
+//
+//1122(초를 분/초로 변환)
+#include<stdio.h>
+void main(){
+    int s, num=0, sum2=0;
+    scanf("%d", &s);
+    num = s/60;
+    sum2 = s%60;
+    printf("%d %d", num, sum2);
+}
+//
+//1125(8진수 16진수 변환)
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d", &n);
+    printf("%o %X", n, n);
+}
+//
+//1131(문자 출력하기)
+#include<stdio.h>
+void main(){
+    char a;
+    scanf("%c", &a);
+    printf("%c", a);
+}
+//
+//1132(문자열 출력하기)
+#include<stdio.h>
+void main(){
+    char a[8];
+    scanf("%s", &a);
+    printf("%s", a);
+}
+//1133(공백이 있는 문자열 입출력)
+#include<stdio.h>
+void main(){
+    char str[31];
+    fgets(str, 31, stdin);
+    printf("%s", str);
+}
+//
+//1135(관계연산자1)
+#include<stdio.h>
+void main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if(b<=a) printf("1");
+    else printf("0");
+}
+//
+//1136(관계연산자2)
+#include<stdio.h>
+void main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if(a==b) printf("1");
+    else printf("0");
+}
+#include<stdio.h> //(관계연산자3)
+void main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if(a==b) printf("0");
+    else printf("1");
+}
+//
+//
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d", &n);
+    printf("%d", !n);
+}
+//
+//1147(<<)
+#include<stdio.h>
+void main(){
+    int a, x;
+    scanf("%d %d", &a, &x);
+    printf("%d", a<<x);
+}
+//
+//1149(두수 중 큰수)
+#include<stdio.h>
+void main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if(a>b) printf("%d", a);
+    else printf("%d", b);
+}
+//
+//1150(세수 중 가장 작은 수 )
+#include <stdio.h>
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    int min = a;
+    if (b < min) {
+        min = b;
+    }
+    if (c < min) {
+        min = c;
+    }
+
+    printf("%d\n", min);
+
+    return 0;
+}
