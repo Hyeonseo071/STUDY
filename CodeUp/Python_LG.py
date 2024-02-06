@@ -295,3 +295,23 @@ sum = a
 for i in range(2, n+1):
     sum = sum*m+d
 print(sum)
+#
+#6091(함께 문제 푸는 날)
+a, b, c = map(int, input().split()) #인원 3명의 각각의 방문 주기
+d = 1 #(day)날짜 1일부터 시작
+while d%a!=0 or d%b!=0 or d%c!=0: #3명중 1명이라도 수업을 듣지 않는다면,
+    d+=1    #날짜를 1일 추가해라
+print(d)    #아니라면(전부다 수업을 같은 날 듣는다면.) 그 날을 출력하여라.
+#
+#6092(이상한 출석 번호 부르기1)
+n = int(input()) #학생들 수
+a = input().split() #공백 기준 a의 리스트 (정수)값 입력받기
+for i in range(n):
+    a[i]=int(a[i])  #a값을 정수로 다시 입력받기
+d=[] 
+for i in range(24): 
+    d.append(0) #0으로 초기화 된 길이가 24인 리스트 d 생성
+for i in range(n): #입력된 숫자들을 순회하면서 
+    d[a[i]]+=1  #각 숫자가 등장한 횟수를 d[i]리스트에 누적.
+for i in range(1, 24): #0인덱스를 제외한 나머지(1~23)d의 리스트를 출력
+    print(d[i], end=' ') #공백으로 나눠서 출력
