@@ -544,3 +544,34 @@ int main() {
 
     return 0;
 }
+//
+//1168(나이계산 1)
+#include<stdio.h>
+void main(){
+    int a, b; 
+    scanf("%d %d", &a, &b); //생년월일 입력
+    a/=10000; //몫 = 년도만 따로 나눠 저장.
+    if(b==1 || b==2){ //성별이 1 또는 2라고 한다면
+        printf("%d", 2012-(1900+a)+1); //1900년대 나이출력
+    }
+    else printf("%d", 2012-(2000+a)+1); //반대(3 또는 4)라면 2000년대 나이 출력
+}
+//
+//1169(나이 계산 2)
+
+#include <stdio.h>
+void main()
+{ 
+    int front, rear, age; //각각 년도, 정수값, 현 나이
+    scanf("%d",&age);   //나이 값 입력 받기
+    if(age >13){ //만약 2000년대 이전에 태어났으면
+        front = 112 -age + 1; //년도 계산
+        rear = 1;
+        printf("%d %d",front, rear); //년도와 숫자 1 출력
+    }
+    else{   //아니라면(2000년대 이후에 태어났다면)
+        front = 12-age+1; //년도 계산
+        rear = 3;
+        printf("%d %d",front, rear);
+    }
+}
