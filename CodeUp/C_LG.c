@@ -614,4 +614,15 @@ int main(){
     return 0;
 }
 //
-//
+//1266(n개의 수의 합)
+#include<stdio.h>
+void main(){
+    int n, sum=0;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int a[i];
+        scanf("%d", &a[i]);
+        sum += a[i];
+    }
+    printf("%d", sum);
+}
