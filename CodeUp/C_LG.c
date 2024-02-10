@@ -626,3 +626,83 @@ void main(){
     }
     printf("%d", sum);
 }
+//
+//1092(함께 문제 푸는 날)
+#include<stdio.h>
+int main(){
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    int day=1;
+    while (day%a!=0 || day%b!=0 || day%c!=0)
+    {
+        day++;     
+    }
+    printf("%d", day);
+    return 0;
+}
+//
+//1254(알파벳 출력하기)
+#include<stdio.h>
+void main(){
+    char a, b;
+    scanf("%c %c", &a, &b);
+    for(int i=a; i<=b; i++){
+        printf("%c ", i);
+    }
+}
+//
+//1255(두 실수 사이 출력하기)
+#include<stdio.h>
+int main(){
+    double a,b;
+    scanf("%lf %lf", &a, &b);
+    for(double i = a; i <= b; i+=0.01){
+        printf("%.2lf ",i);
+    } 
+    return 0;
+}
+//
+//1267(n개의 수 중 5의 배수의 합)
+#include<stdio.h>
+void main(){
+    long long int n, sum=0;
+    scanf("%lld", &n);
+    long long int a[1000];
+    for(int i=0; i<n; i++){
+        scanf("%lld ", &a[i]);
+        if(a[i]%5==0){
+            sum += a[i];
+        }
+    }
+    printf("%lld", sum);
+}
+//
+//1268(n개의 수 중 홀수의 개수)
+#include<stdio.h>
+int main(){
+    int n, sum=0;
+    scanf("%d", &n);
+    int *a = (int*)malloc(sizeof(int)*n);
+    for(int i=0; i<n; i++){
+        scanf("%d", &a[i]);
+        if(a[i]%2!=0){
+            sum += 1;
+        }
+    }
+    printf("%d", sum);
+    free(a);
+    return 0;
+}
+//
+//1269(수열의 값 구하기)
+#include<stdio.h>
+int main(){
+    int a, b, c, n;
+    scanf("%d %d %d %d", &a, &b, &c, &n); 
+    int term = a; // 첫 번째 항은 a   
+    for(int i=1; i<n; i++){
+        term = term * b + c; // 수열의 다음 항 계산
+    }
+    printf("%d", term);
+    return 0;
+}
