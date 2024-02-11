@@ -706,3 +706,11 @@ int main(){
     printf("%d", term);
     return 0;
 }
+//
+//1731(특수 서식 문자 출력하기)
+#include<stdio.h>
+void main(){
+    printf("special characters\n");
+    printf("[\\n,\\\",\\\\] is very important.");
+    return 0;
+}
