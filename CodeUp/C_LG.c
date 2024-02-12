@@ -714,3 +714,58 @@ void main(){
     printf("[\\n,\\\",\\\\] is very important.");
     return 0;
 }
+//
+//1261(스페셜 저지 문제)
+#include<stdio.h>
+int main(){
+    int n = 10;
+    int a[50];
+    for(int i=0; i<n; i++){
+        scanf("%d", &a[i]);
+        if(a[i]%5==0){  //a[i]가 5의 배수가 맞으면
+            printf("%d", a[i]); //그 수중 하나만 출력하기
+            break; //그리고 멈추기
+        }
+        else printf("0"); //5의 배수가 하나도 없다면 0만 출력하기
+    }
+    return 0;
+}
+//
+//1270(1의 개수는? 1)
+#include<stdio.h>
+int main(){
+    int n, sum=0;
+    scanf("%d", &n); //반복할 수 입력받기
+    for(int i=1; i<=n; i++){ 
+        if(i%10==1){ //만약 10으로 나눴을 때 나머지가 1이라면,
+            sum += 1; //sum에 1을 더하기(나온 개수)
+        }
+    }
+    printf("%d", sum); //sum 출력하기
+    return 0;
+}
+//
+//1271(최대값 구하기)
+#include<stdio.h>
+int main(){
+    int n, term=0;
+    scanf("%d", &n);    //받을 개수 입력받기
+    int a[n];  
+    for(int i=0; i<n; i++){
+        scanf("%d", &a[i]); //차례대로 배열 입력받기
+        if(term<a[i]){ //만약 term보다 a[i]의 값이 크다면 
+            term = a[i]; //term을 a[i]로 덮어쓰기
+        }
+    }
+    printf("%d", term); //term(최대값)출력하기
+    return 0;
+}
+//
+//1272(기부)
+#include<stdio.h>
+int main(){
+    int a, b;
+    
+
+    return 0;
+}
