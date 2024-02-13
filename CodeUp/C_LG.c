@@ -769,3 +769,47 @@ int main(){
 
     return 0;
 }
+//
+//1351(구구단 출력하기)
+#include<stdio.h> //만약 2 5가 입력된다면?(2부터 5단까지 출력해야함.)
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b); //a부터 b단까지 입력받기
+    for(int i=a; i<=b; i++){ //구구단 앞자리 출력하는 동안에
+        for(int j=1; j<=9; j++){
+            printf("%d*%d=%d\n", i, j, i*j); //구구단 한줄씩 출력
+        }
+    }
+    return 0;
+}
+//
+//1352(사각형 출력하기1)
+#include<stdio.h> //n개의 별과 n개의 줄이 출력되어야 하면
+int main(){      //어떻게 해야 할까?
+    int n;
+    scanf("%d", &n);
+    for(int i=1; i<=n; i++){ //n개의 가로줄
+        for(int j=1; j<=n; j++){ //n개의 세로줄
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//
+//1354(삼각형 출력하기2)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n); //길이 n 입력받기
+    for(int i=1; i<=n; i++){  //세로줄
+        for(int k=i; k<=n; k++){
+            printf("*"); //별 출력
+        }
+        for(int j=1; j<i; j++){ //공백출력
+            printf(" ");
+        }
+        printf("\n"); //줄바꿈
+    }
+    return 0;
+}
