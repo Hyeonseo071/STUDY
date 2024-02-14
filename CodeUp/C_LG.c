@@ -813,3 +813,75 @@ int main(){
     }
     return 0;
 }
+//
+//1355(삼각형 출력하기 3)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        for(int j=0; j<i; j++){
+            printf(" "); //공백출력
+        }
+        for(int k=0; k<n-i; k++){
+            printf("*"); //별(역삼각형)출력
+        }
+        printf("\n"); //줄바꿈
+    }
+    return 0;
+}
+//
+//1356(사각형 출력하기 2)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        for(int k=0; k<n; k++){
+            if(k==0 || k==n-1 || i==0 || i==n-1){
+                printf("*");
+            }
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//
+//1357(삼각형 출력하기4)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    //삼각형 높이까지 출력
+    for(int i=0; i<n; i++){
+        for(int j=0; j<=i; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    //삼각형 1줄씩 줄어들어 출력
+    for(int i=n-1; i>0; i--){
+        for(int j=0; j<i; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+// //
+// //1358(삼각형 출력하기 5)
+// #include<stdio.h>
+// int main(){
+//     int n;
+//     if(n%2==1){
+//         scanf("%d", &n);
+//     }
+//     for(int i=0; i<n; i++){
+
+//     }
+
+
+
+//     return 0;
+// }
