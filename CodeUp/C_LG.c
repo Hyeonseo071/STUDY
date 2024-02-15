@@ -869,19 +869,25 @@ int main(){
     }
     return 0;
 }
-// //
-// //1358(삼각형 출력하기 5)
-// #include<stdio.h>
-// int main(){
-//     int n;
-//     if(n%2==1){
-//         scanf("%d", &n);
-//     }
-//     for(int i=0; i<n; i++){
-
-//     }
-
-
-
-//     return 0;
-// }
+//
+//1358(삼각형 출력하기 5)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n); // 사용자로부터 입력 받은 값 저장
+    // 별을 출력하는 삼각형의 높이는 입력값 n의 반까지이므로 n/2+1까지 반복
+    for(int i=1; i<=n/2+1; i++){
+        // 공백 출력
+        for(int j=n/2; j>=i; j--){
+            printf(" ");
+        }
+        // 별 출력
+        for(int j=0; j<i*2-1; j++){ // i번째 줄에 출력되는 별의 개수는 (2*i-1)
+            printf("*");
+        }
+        printf("\n"); // 줄 바꿈
+    }
+    return 0;
+}
+//
+//
