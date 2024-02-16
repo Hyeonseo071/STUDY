@@ -890,4 +890,16 @@ int main(){
     return 0;
 }
 //
-//
+//1407(문자열 출력하기1)
+#include <stdio.h>
+int main() {
+    char str[101];
+    gets(str);
+    int len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        if (str[i] != ' ') {
+            printf("%c", str[i]);
+        }
+    }
+    return 0;
+}
