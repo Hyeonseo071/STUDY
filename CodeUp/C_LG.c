@@ -904,9 +904,15 @@ int main() {
     return 0;
 }
 //
-//1212
+//1409(기억력 테스트1)
 #include<stdio.h>
 int main(){
-
+    int a[10];
+    for(int i=0; i<10; i++){
+        scanf("%d", &a[i]);
+    }
+    int n;
+    scanf("%d", &n);
+    printf("%d", a[n-1]);
     return 0;
 }
