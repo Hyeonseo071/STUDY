@@ -916,3 +916,17 @@ int main(){
     printf("%d", a[n-1]);
     return 0;
 }
+//
+//1410(올바른 괄호 1)
+#include<stdio.h>
+int main(){
+    char a[100001];
+    scanf("%s", &a);
+    int sum = 0, sam = 0;
+    for(int i=0; a[i]!='\0'; i++){
+        if(a[i]=='(') sum += 1;
+        else if(a[i]==')') sam += 1;
+    }
+    printf("%d %d", sum, sam);
+    return 0;
+}
