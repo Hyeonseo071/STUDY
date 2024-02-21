@@ -930,3 +930,16 @@ int main(){
     printf("%d %d", sum, sam);
     return 0;
 }
+//
+//1406(love)
+//love가 들어간 단어가 호출된다면 아이러브유 출력하기
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char a[16];
+    scanf("%s", &a);
+    if(strcmp(a, "love")==0){ //a와 love가 동일(일치)하면 
+        printf("I love you.\n"); //I love you를 출력하기
+    }
+    return 0;
+}
