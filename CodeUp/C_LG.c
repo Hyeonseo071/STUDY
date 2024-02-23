@@ -943,3 +943,71 @@ int main(){
     }
     return 0;
 }
+//
+//1295(알파벳 대소문자 변환)
+//아스키 코드를 활용하여 문제를 풀 수 있다.
+//대문자 : 65이상, 90이하(대문자 -> 32더하기)
+//소문자 : 97이상, 122이하(소문자 -> 32빼기)
+#include<stdio.h>
+int main(){
+    char t[1001];
+    scanf("%s", &t);
+    for(int i=0; t[i]!='\0'; i++){
+        if(t[i]>=65 && t[i]<=90){ //만약 대문자인 경우
+            t[i] += 32; //소문자로 변형해주기
+        }
+        else if(t[i]>=97 && t[i]<=122){ //만약 소문자인 경우
+            t[i] -= 32; //대문자로 변형해주기
+        }
+    }
+    for(int i=0; t[i]!='\0'; i++){
+        printf("%c", t[i]); //변형된 문자들을 각각 반복문으로 출력
+    }
+    return 0;
+}
+//
+//1537(함수로 hello 또는 world 출력하기)
+#include<stdio.h>
+    void f(int k){
+        if(k==1) printf("hello\n");
+        else if(k==2) printf("world\n");
+        else printf("\n");
+        return; //생략가능
+    }
+int main(){
+    scanf("%d", &n);
+    f(n);
+    return 0;
+}
+//
+//1201(정수판별)
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    if(n<0) printf("음수");
+    else if(n==0) printf("0");
+    else printf("양수");
+    return 0;
+}
+//
+//1222(축구의 신2)
+#include <stdio.h>
+int main (void)
+{
+    int time, score1 ,score2;
+    scanf("%d %d %d",&time, &score1, &score2);
+    time = 90 - time;
+    if( time != 0)  //90분이 아닐동안
+    {
+    score1=1+score1; //투입하자마자 골을 넣음
+    if(time >=5){   //5분이 지날때마다
+    score1 = score1 + (time-1)/5; 
+    }
+    }
+    if(score1>score2){printf("win");}
+    else if(score1 == score2){printf("same");}
+    else{ printf("lose");}
+    
+    return 0;
+}
