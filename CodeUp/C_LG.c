@@ -1012,4 +1012,29 @@ int main (void)
     return 0;
 }
 //
-//
+//1180(만능 휴지통)
+#include <stdio.h>
+
+int main() {
+    int trash_level;
+    scanf("%d", &trash_level);
+
+    // 알고리즘: 10의 자릿수와 1의 자릿수를 서로 바꾸고, 거기에 2를 곱한다.
+    int tens_place = trash_level / 10;  // 10의 자릿수
+    int ones_place = trash_level % 10;  // 1의 자릿수
+    int compressed_value = (ones_place * 10 + tens_place) * 2;
+    
+    // 만약 압축 결과가 100을 넘으면 100의 자릿수는 무시한다.
+    if (compressed_value >= 100)
+        compressed_value %= 100;
+
+    printf("%d\n", compressed_value);
+    
+    // 휴지통의 내용에 따른 메시지 출력
+    if (compressed_value <= 50)
+        printf("GOOD\n");
+    else
+        printf("OH MY GOD\n");
+
+    return 0;
+}
