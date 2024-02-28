@@ -1038,3 +1038,13 @@ int main() {
 
     return 0;
 }
+//
+//1734(welcome!)
+#include<stdio.h>
+int main(){
+    char ID[11];
+    scanf("%s", &ID);
+    printf("welcome! %s", ID);
+
+    return 0;
+}
