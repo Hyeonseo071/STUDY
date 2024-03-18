@@ -1,0 +1,17 @@
+create table student (
+sid char(8) primary key,
+sname varchar2(20) not null,
+subcode char(2),
+phone varchar(20)
+);
+
+insert into student values('20240318', '성현서', '01', '010-1111-5678');
+insert into student values('20240418', '성민규', '02', '010-2222-5678');
+insert into student values('20240518', '성진진', '03', '010-3333-5678');
+insert into student values('20240618', '성진팔', '04', '010-4444-5678');
+
+commit;
+
+select * from student;
+
+drop table student;
