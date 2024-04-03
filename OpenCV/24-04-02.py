@@ -83,3 +83,11 @@
 # x, y, w, h = roi
 # dst = dst[y:y+h, x:x+w]
 # cv.imwrite('cailbresult.png', dst)
+
+import cv2 as cv
+import numpy as np
+from matplotlib import pyplot as plt
+
+#그림파일 불러오기
+img = cv.imread('puppy.jpg', cv.IMREAD_GRAYSCALE)
+assert img is not None, "file could not be read, check with os.path.exists()"
