@@ -22,54 +22,54 @@
 #include<stdio.h>
 typedef struct student{
 
-int num;
-char name[20];
-int mic, lin, pro;
-int tot;
-double avg;
-char grade;
+    int num;
+    char name[20];
+    int mic, lin, pro;
+    int tot;
+    double avg;
+    char grade;
 }Student;
 void input_data(Student *pary){ //구조체 안의 변수들을 입력받는 함수
-for (int i = 0; i < 5; i++) {
-scanf("%d", &pary[i].num);
-scanf("%s", pary[i].name);
-scanf("%d", &pary[i].mic);
-scanf("%d", &pary[i].lin);
-scanf("%d", &pary[i].pro);
-}
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &pary[i].num);
+        scanf("%s", pary[i].name);
+        scanf("%d", &pary[i].mic);
+        scanf("%d", &pary[i].lin);
+        scanf("%d", &pary[i].pro);
+    }
 }
 void calc_data(Student * pary){ //(tot은 총점, avg은 평균, 등급은 grade로 지정)입력된 값을 계
 산 하는 함수.
 for (int i = 0; i < 5; i++) {
-pary[i].tot = pary[i].mic + pary[i].lin + pary[i].pro; //총점 계산
-pary[i].avg = pary[i].tot / 3.0; //평균 값 계산
-if (pary[i].avg >= 90) //만약 평균 값이 90점 이상이라면
-pary[i].grade = 'A'; //등급 A를 출력
-else if (pary[i].avg >= 80)
-pary[i].grade = 'B';
-else if (pary[i].avg >= 70)
-pary[i].grade = 'C';
-else if (pary[i].avg >= 60)
-pary[i].grade = 'D';
-else
-pary[i].grade = 'F';
+    pary[i].tot = pary[i].mic + pary[i].lin + pary[i].pro; //총점 계산
+    pary[i].avg = pary[i].tot / 3.0; //평균 값 계산
+    if (pary[i].avg >= 90) //만약 평균 값이 90점 이상이라면
+        pary[i].grade = 'A'; //등급 A를 출력
+    else if (pary[i].avg >= 80)
+        pary[i].grade = 'B';
+    else if (pary[i].avg >= 70)
+        pary[i].grade = 'C';
+    else if (pary[i].avg >= 60)
+        pary[i].grade = 'D';
+    else
+        pary[i].grade = 'F';
 }
 }
 void print_data(Student *pary){
 for (int i = 0; i < 5; i++) {
-printf("%d, %s, %d, %.2f, %c\n",
-pary[i].num, pary[i].name, pary[i].tot, pary[i].avg, pary[i].grade); //계산한 값들
+    printf("%d, %s, %d, %.2f, %c\n",
+    pary[i].num, pary[i].name, pary[i].tot, pary[i].avg, pary[i].grade); //계산한 값들
 을 각각 프린트(출력)함.
-}
+    }
 }
 int main(){
-Student ary[5];
+    Student ary[5];
 
-input_data(ary);
-calc_data(ary);
-printf("결과 값은?\n");
-print_data(ary);
-return 0;
+    input_data(ary);
+    calc_data(ary);
+    printf("결과 값은?\n");
+    print_data(ary);
+    return 0;
 }
 그 외의 메모리 공간을 공유할 수 있는 공용체와 상수를 정의하는 열거형, 각 필요한 자료형의 크기
 만큼 공간을 차지하는 비트 필드에 대해서도 배울 수 있었다. 이번 시간에는 메모리 공간을 효율적으로 사용하는 것을 중심으로 수업을 배웠는데, 그점에 대해서
